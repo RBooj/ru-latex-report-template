@@ -1,0 +1,60 @@
+\documentclass{article}
+
+% Commonly Used Packages
+% Document Formatting/Editing
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage[mmddyyyy]{datetime}
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{listings}
+
+% Math/Symbols
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+
+% Figures and graphics
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[american]{circuitikz}
+\usepackage{tikz}
+
+% tikz libraries
+\usetikzlibrary{calc, fit, backgrounds}
+
+% Circuitikz customization
+\ctikzset{diodes/scale=0.6}
+
+% Custom commands
+\newcommand{\courseName}{DEFAULT COURSE NAME}
+\newcommand{\instructorName}{DEFAULT INSTRUCTOR NAME}
+\newcommand{\LIName}{DEFAULT LA/LI NAME}
+\newcommand{\courseRoom}{DEFAULT COURSE ROOM}
+
+% For use in math mode. Use regular text as subscript instead of math-mode italics
+\newcommand{\mathLabel}[2]{#1_{\text{#2}}}
+
+% Header/footer setup
+\author{Ryan Bugianesi}
+\title{DEFAULT TITLE}
+\date{\today}
+\newcommand{\setHeadFoot}
+{
+    \pagestyle{fancy}
+    \fancyhead[L]{\theauthor}
+    \fancyhead[C]{\thetitle}
+    \fancyhead[R]{\thedate}
+}
+
+\begin{document}
+\input{inputs/titlePage.tex}
+\setHeadFoot
+\tableofcontents
+\pagebreak
+
+\section{First Section}
+\end{document}
